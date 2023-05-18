@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
@@ -8,7 +8,8 @@ import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
-    const { user, createLogIn, createUSerWithGoogle } = useContext(AuthContext);
+    const { createLogIn, createUSerWithGoogle } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleLogIn = (event) => {
 
@@ -33,6 +34,9 @@ const Login = () => {
 
                     })
                 }
+                form.reset();
+                navigate('/')
+                console.log(user)
             })
             .catch(error => {
 
@@ -67,8 +71,9 @@ const Login = () => {
                         icon: 'success'
 
                     })
-
                 }
+                navigate('/');
+                console.log(result)
             })
             .catch(error => {
 
@@ -111,6 +116,8 @@ const Login = () => {
                     </form>
                 </div>
                 <div className="divider lg:divider-horizontal"></div>
+
+
                 <div className="w-96">
                     <div className="flex flex-col w-full border-opacity-50 gap-2 text-center">
                         <button onClick={handleGoogle} className="btn btn-block bg-neutral-50 text-black gap-3"><FcGoogle></FcGoogle>GOOGLE</button>

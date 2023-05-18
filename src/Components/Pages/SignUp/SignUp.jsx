@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import image from '../../../assets/1.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2'
 
@@ -8,7 +8,8 @@ import Swal from 'sweetalert2'
 
 const SignUp = () => {
 
-    const { users, createUser } = useContext(AuthContext);
+    const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSignUp = (event) => {
 
@@ -35,6 +36,9 @@ const SignUp = () => {
 
                     })
                 }
+                
+                
+                navigate('/login');
                 form.reset();
 
             })

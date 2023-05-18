@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut,  updateProfile } from "firebase/auth";
 import app from '../firebase/firebase.config';
 
 
@@ -9,14 +9,16 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
 
     const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true);
 
 
-    
-    
+
+
     /* Sign Up CREATE ACCOUNT */
 
     const createUser = (email, password) => {
-        
+
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
@@ -24,11 +26,13 @@ const AuthProvider = ({ children }) => {
 
 
     /*Log in*/
-    
+
     const createLogIn = (email, password) => {
 
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password);
     }
+
 
 
 
@@ -36,44 +40,61 @@ const AuthProvider = ({ children }) => {
 
     const logOut = () => {
 
+        setLoading(true)
         return signOut(auth)
     }
 
 
 
-    
+
+
     /*GOOGLE LOG IN*/
 
     const createUSerWithGoogle = (provider) => {
 
-        return signInWithPopup(auth, provider) ;
+        setLoading(true)
+        return signInWithPopup(auth, provider);
     }
-     
+
+
 
 
     /*On Auth State*/
 
-    useEffect( () => {
-       
+    useEffect(() => {
+
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
-          
+
             setUsers(currentUser);
+            setLoading(false);
 
         })
-        return unsubscribe();
 
-    },[])
+        return () => unsubscribe();
 
+    }, [])
+
+
+
+
+
+    /*User Photo*/
 
 
     
+
+
+
+
     const info = {
 
         createUser,
         users,
+        loading,
         createLogIn,
         createUSerWithGoogle,
-        logOut
+        logOut,
+        
 
     }
 
