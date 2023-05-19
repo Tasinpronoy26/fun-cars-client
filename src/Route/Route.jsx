@@ -8,6 +8,7 @@ import Blog from "../Components/Pages/Blog/Blog";
 import Login from "../Components/Pages/Login/Login";
 import SignUp from "../Components/Pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
+import CarDetails from "../Components/CarDetails/CarDetails";
 
 const router = createBrowserRouter([
     {
@@ -41,7 +42,11 @@ const router = createBrowserRouter([
             {
                 path: "/signup",
                 element: <SignUp></SignUp>
-            }
+            },
+            {
+                path: "/cartoys",
+                element: <PrivateRoute><CarDetails></CarDetails></PrivateRoute>
+            },
             
         ],
     },

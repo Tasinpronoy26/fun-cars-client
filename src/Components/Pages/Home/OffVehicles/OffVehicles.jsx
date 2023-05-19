@@ -4,6 +4,7 @@ import { FaRegStar, FaStar } from 'react-icons/Fa';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { Link } from 'react-router-dom';
 
 const OffVehicles = ({ toy }) => {
 
@@ -30,7 +31,7 @@ const OffVehicles = ({ toy }) => {
                     readonly
                     placeholderSymbol={<FaStar></FaStar>}
                     fullSymbol={<FaStar></FaStar>}></Rating>
-                <button><BsFillArrowRightCircleFill></BsFillArrowRightCircleFill></button>
+                <Link to="/cartoys"><button><BsFillArrowRightCircleFill></BsFillArrowRightCircleFill></button></Link>
             </div>
 
         </div>
