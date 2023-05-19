@@ -1,0 +1,81 @@
+[
+    {
+        "category": "Sports_Cars",
+        "toys": [
+            {
+                "picture": "https://images.pexels.com/photos/97355/pexels-photo-97355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "name": "Speedster GT",
+                "price": "$29.99",
+                "rating": 4.5,
+                "view_details": "https://example.com/toy1"
+            },
+            {
+                "picture": "https://images.pexels.com/photos/92615/pexels-photo-92615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "name": "Turbo Racer",
+                "price": "$19.99",
+                "rating": 4.2,
+                "view_details": "https://example.com/toy2"
+            },
+            {
+                "picture": "https://images.pexels.com/photos/15100070/pexels-photo-15100070/free-photo-of-sports-car-and-toy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "name": "Gang Racer",
+                "price": "$19.99",
+                "rating": 4.2,
+                "view_details": "https://example.com/toy2"
+            }
+        ]
+    },
+    {
+        "category": "Off-Road_Vehicles",
+        "toys": [
+            {
+                "picture": "https://images.pexels.com/photos/1522186/pexels-photo-1522186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "name": "Mud Runner",
+                "price": "$24.99",
+                "rating": 4.7,
+                "view_details": "https://example.com/toy3"
+            },
+            {
+                "picture": "https://images.pexels.com/photos/12168779/pexels-photo-12168779.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "name": "Trail Blazer",
+                "price": "$32.99",
+                "rating": 4.4,
+                "view_details": "https://example.com/toy4"
+            },
+            {
+                "picture": "https://images.pexels.com/photos/2767817/pexels-photo-2767817.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "name": "Best Blazer",
+                "price": "$32.99",
+                "rating": 4.4,
+                "view_details": "https://example.com/toy4"
+            }
+        ]
+    },
+    {
+        "category": "Vintage_Cars",
+        "toys": [
+            {
+                "picture": "https://images.pexels.com/photos/249343/pexels-photo-249343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "name": "Classic Cruiser",
+                "price": "$39.99",
+                "rating": 4.8,
+                "view_details": "https://example.com/toy5"
+            },
+            {
+                "picture": "https://images.pexels.com/photos/552139/pexels-photo-552139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "name": "Retro Roadster",
+                "price": "$27.99",
+                "rating": 4.6,
+                "view_details": "https://example.com/toy6"
+            },
+            {
+                "picture": "https://images.pexels.com/photos/13499746/pexels-photo-13499746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "name": "Road Roadster",
+                "price": "$27.99",
+                "rating": 4.6,
+                "view_details": "https://example.com/toy6"
+            }
+        ]
+    }
+    
+]
