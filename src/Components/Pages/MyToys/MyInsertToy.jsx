@@ -1,5 +1,7 @@
 import React from 'react';
-import Swal from 'sweetalert2';
+import { GrDocumentUpdate } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
+
 
 const MyInsertToy = ({ mytoy,handleDelete }) => {
 
@@ -22,6 +24,7 @@ const MyInsertToy = ({ mytoy,handleDelete }) => {
             <td>{rating}</td>
             <td>{quantity}</td>
             <td>{details}</td>
+            <td><Link to={`/update/${_id}`}><button><GrDocumentUpdate></GrDocumentUpdate></button></Link></td>
         </tr>
     );
 };

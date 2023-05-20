@@ -3,6 +3,7 @@ import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import MyInsertToy from './MyInsertToy';
 import Swal from 'sweetalert2';
 
+
 const MyToys = () => {
 
     const { users } = useContext(AuthContext);
@@ -25,21 +26,41 @@ const MyToys = () => {
 
     const handleDelete = id => {
 
-    
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
 
-
-            fetch(`http://localhost:5000/mytoy/${id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    if (data.deletedCount > 0) {
-                        const data = myToys.filter(toy => toy._id !== id);
-                        setMyToys(data);
-                    }
+                fetch(`http://localhost:5000/mytoy/${id}`, {
+                    method: 'DELETE'
                 })
-        
+                    .then(res => res.json())
+                    .then(datas => {
+                        console.log(datas)
+                        if (datas.deletedCount > 0) {
+
+                            Swal.fire({
+                                title: 'DELETED!!',
+                                icon: 'success'
+
+                            })
+
+                            const data = myToys.filter(toy => toy._id !== id);
+                            setMyToys(data);
+                        }
+
+                    })
+
+
+            }
+        })
+
 
     }
 
@@ -65,6 +86,7 @@ const MyToys = () => {
                             <th>Rating</th>
                             <th>Available Quantity</th>
                             <th>Details Description</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
