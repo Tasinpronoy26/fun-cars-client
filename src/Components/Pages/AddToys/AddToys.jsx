@@ -16,6 +16,7 @@ const AddToys = () => {
         const price = form.price.value;
         const quantity = form.quantity.value;
         const details = form.details.value;
+        const rating = form.rating.value;
 
         const add = {
             photo,
@@ -25,7 +26,8 @@ const AddToys = () => {
             category,
             price,
             quantity,
-            details
+            details,
+            rating
         }
 
         console.log(add);
@@ -50,8 +52,8 @@ const AddToys = () => {
 
                 }
             })
-        
-            form.reset();
+
+        form.reset();
 
 
     }
@@ -90,11 +92,16 @@ const AddToys = () => {
 
                                 <input type="text" placeholder="$" name='price' className="input rounded-none" />
                             </div>
-                        </div>
-                        <div className="form-control mt-3">
+                            <div className="form-control mt-3">
 
-                            <input type="text" placeholder="Quantity" name='quantity' className="input rounded-none" />
+                                <input type="text" placeholder="Quantity" name='quantity' className="input rounded-none" />
+                            </div>
+                            <div className="form-control mt-3">
+
+                                <input type="text" placeholder="Rating" name='rating' className="input rounded-none" />
+                            </div>
                         </div>
+
                         <div className="form-control mt-3">
 
                             <input type="text" name='details' className="input rounded-none h-40" />
