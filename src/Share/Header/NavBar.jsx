@@ -48,10 +48,10 @@ const NavBar = () => {
                             <>
 
                                 <li><Link to="/">Home</Link></li>
-                                <li><Link>All toys</Link></li>
+                                <li><Link to="/alltoy">All toys</Link></li>
                                 <li><Link>Blog</Link></li>
                                 <li><Link>My Toys</Link></li>
-                                <li><Link>Add A Toy</Link></li>
+                                <li><Link>Add a Toy</Link></li>
 
                             </> : <>
 
@@ -73,16 +73,16 @@ const NavBar = () => {
                         <>
 
                             <li><Link to="/">Home</Link></li>
-                            <li><Link>All toys</Link></li>
-                            <li><Link>Blog</Link></li>
-                            <li><Link>My Toys</Link></li>
-                            <li><Link>Add A Toy</Link></li>
+                            <li><Link to="/alltoy">All toys</Link></li>
+                            <li><Link to="/blog">Blog</Link></li>
+                            <li><Link to="/mytoys">My Toys</Link></li>
+                            <li><Link to="/addtoys">Add a Toy</Link></li>
 
                         </> : <>
 
                             <li><Link to="/">Home</Link></li>
-                            <li><Link>All toys</Link></li>
-                            <li><Link>Blog</Link></li>
+                            <li><Link to="/alltoy">All toys</Link></li>
+                            <li><Link to="/blog">Blog</Link></li>
 
                         </>
                     }
@@ -91,7 +91,7 @@ const NavBar = () => {
             <div className="avatar navbar-end flex gap-5">
                 <div>
                     {
-                        users ?.email ? <button onClick={userLogOut} className='mt-2 btn'>Log out</button>
+                        users?.email ? <button onClick={userLogOut} className='mt-2 btn'>Log out</button>
                             :
                             <button className='mt-2 btn'><Link to="/login"><span className='mt-2'>Log in</span></Link></button>
 

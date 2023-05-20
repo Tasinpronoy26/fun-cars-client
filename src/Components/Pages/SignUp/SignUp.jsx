@@ -36,8 +36,7 @@ const SignUp = () => {
 
                     })
                 }
-                
-                
+
                 navigate('/');
                 form.reset();
 

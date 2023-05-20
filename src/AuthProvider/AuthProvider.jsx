@@ -10,6 +10,7 @@ const AuthProvider = ({ children }) => {
 
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [carDetails, setCarDetails] = useState(null);
 
 
 
@@ -94,6 +95,7 @@ const AuthProvider = ({ children }) => {
         createLogIn,
         createUSerWithGoogle,
         logOut,
+        
         
 
     }

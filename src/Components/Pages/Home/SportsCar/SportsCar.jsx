@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Rating from 'react-rating';
 import { FaRegStar, FaStar } from 'react-icons/Fa';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../../AuthProvider/AuthProvider';
 
 const SportsCar = ({ toy }) => {
+    const { setCarDetails } = useContext(AuthContext);
     const { name, picture, price, rating } = toy;
 
     useEffect(() => {
@@ -30,7 +32,7 @@ const SportsCar = ({ toy }) => {
                     readonly
                     placeholderSymbol={<FaStar></FaStar>}
                     fullSymbol={<FaStar></FaStar>}></Rating>
-                <Link to="/cartoys"><button><BsFillArrowRightCircleFill></BsFillArrowRightCircleFill></button></Link>
+                <Link to="/cartoys" onClick={() => setCarDetails(picture)}><BsFillArrowRightCircleFill></BsFillArrowRightCircleFill></Link>
                 
             </div>
 

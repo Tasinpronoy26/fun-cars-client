@@ -44,7 +44,7 @@ const ShopByCategories = () => {
                 <TabPanel>
                     <div className='lg:grid grid-cols-3 gap-5 mt-10'>
                         {
-                            categories.map(category => category.toys.map(toy => <Vintage toy={toy} />))
+                            categories.map(category => category.toys.map(toy => <Vintage  toy={toy} />))
                         }
                     </div>
                 </TabPanel>
