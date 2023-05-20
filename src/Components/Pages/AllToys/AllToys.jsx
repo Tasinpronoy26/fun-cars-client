@@ -22,7 +22,7 @@ const AllToys = () => {
                 <table className="table w-full">
                     <thead>
                         <tr>
-                            
+
                             <th>Picture</th>
                             <th>Name</th>
                             <th>Seller Name</th>
@@ -32,7 +32,9 @@ const AllToys = () => {
                             <th>Rating</th>
                             <th>Available Quantity</th>
                             <th>Details Description</th>
-                            
+                            <th></th>
+
+
                         </tr>
                     </thead>
                     <tbody>

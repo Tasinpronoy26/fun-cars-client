@@ -7,9 +7,11 @@ import 'aos/dist/aos.css'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../AuthProvider/AuthProvider';
 
-const SportsCar = ({ toy }) => {
-    const { setCarDetails } = useContext(AuthContext);
+const SportsCar = ({ toy, active }) => {
+    const { carDetails, setCarDetails } = useContext(AuthContext);
     const { name, picture, price, rating } = toy;
+
+    
 
     useEffect(() => {
 
@@ -32,11 +34,12 @@ const SportsCar = ({ toy }) => {
                     readonly
                     placeholderSymbol={<FaStar></FaStar>}
                     fullSymbol={<FaStar></FaStar>}></Rating>
-                <Link to="/cartoys" onClick={() => setCarDetails(picture)}><BsFillArrowRightCircleFill></BsFillArrowRightCircleFill></Link>
-                
+                <Link to={`/cartoys/${active}`}><button onClick={ () => setCarDetails(picture) }><BsFillArrowRightCircleFill></BsFillArrowRightCircleFill></button></Link>
+                 
             </div>
 
         </div>
+        
     );
 };
 

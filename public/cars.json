@@ -1,7 +1,5 @@
 [
-    {
-        "category": "Sports_Cars",
-        "toys": [
+    
             {
                 "picture": "https://images.pexels.com/photos/97355/pexels-photo-97355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "name": "Speedster GT",
@@ -22,12 +20,9 @@
                 "price": "$19.99",
                 "rating": 4.2,
                 "view_details": "https://example.com/toy2"
-            }
-        ]
-    },
-    {
-        "category": "Off-Road_Vehicles",
-        "toys": [
+            },
+        
+   
             {
                 "picture": "https://images.pexels.com/photos/1522186/pexels-photo-1522186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "name": "Mud Runner",
@@ -48,9 +43,8 @@
                 "price": "$32.99",
                 "rating": 4.4,
                 "view_details": "https://example.com/toy4"
-            }
-        ]
-    },
+            },
+        
     {
         "category": "Vintage_Cars",
         "toys": [

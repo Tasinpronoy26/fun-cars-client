@@ -15,7 +15,7 @@ const ShopByCategories = () => {
             .then(data => setCategories(data));
     }, [active]);
 
-  
+
 
     return (
         <div>
@@ -30,7 +30,7 @@ const ShopByCategories = () => {
                 <TabPanel>
                     <div className='lg:grid grid-cols-3 gap-5 mt-10'>
                         {
-                            categories.map(category => category.toys.map(toy => <SportsCar toy={toy} />))
+                            categories.map(category => category.toys.map(toy => <SportsCar toy={toy} active={active} />))
                         }
                     </div>
                 </TabPanel>
@@ -44,7 +44,7 @@ const ShopByCategories = () => {
                 <TabPanel>
                     <div className='lg:grid grid-cols-3 gap-5 mt-10'>
                         {
-                            categories.map(category => category.toys.map(toy => <Vintage  toy={toy} />))
+                            categories.map(category => category.toys.map(toy => <Vintage toy={toy} />))
                         }
                     </div>
                 </TabPanel>
