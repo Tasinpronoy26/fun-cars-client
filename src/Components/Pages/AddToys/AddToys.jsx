@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
 
 const AddToys = () => {
+
+    const { users} = useContext(AuthContext);
 
     const handleAddToys = (event) => {
 
@@ -82,7 +85,7 @@ const AddToys = () => {
                             </div>
                             <div className="form-control">
 
-                                <input type="email" placeholder="Seller Email" name='seller_email' className="input rounded-none" />
+                                <input type="email" placeholder="Seller Email" name='seller_email' defaultValue={users.email} disabled className="input rounded-none" />
                             </div>
                             <div className="form-control">
 
