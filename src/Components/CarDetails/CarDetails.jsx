@@ -1,36 +1,12 @@
-import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../AuthProvider/AuthProvider';
-
-
+import React, { useContext, useEffect, useState } from 'react';
 
 const CarDetails = () => {
     
-    
-    const { carDetails, setCarDetails } = useContext(AuthContext);
-
-    const details = useLoaderData();
-
-    const {_id} = details;
-    
-
-    
-    
-
-    
-
-    
-
-
-    
-
+     
 
     return (
         <div>
-
-            <h1>{_id}</h1>
-
-         
+            <h1></h1>
         </div>
     );
 };

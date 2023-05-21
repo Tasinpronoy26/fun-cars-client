@@ -47,9 +47,9 @@ const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
-                path: "/cartoys/:id",
+                path: "/cartoys/:text",
                 element: <PrivateRoute><CarDetails></CarDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/cartoys/${params.text}`)
+                loader: ({params}) => fetch(`http://localhost:5000/category/${params.text}`)
             },
             {
                 path: "/update/:id",

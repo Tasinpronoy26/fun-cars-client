@@ -37,7 +37,7 @@ const NavBar = () => {
 
 
     return (
-        <div className="navbar bg-white border-b mt-5 mb-10 ">
+        <div className="navbar bg-white border-b  mb-10 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -67,7 +67,7 @@ const NavBar = () => {
                 <h1 className='font-bold text-2xl'>FUN CAR</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal">
                     {users ?
 
                         <>
@@ -88,16 +88,25 @@ const NavBar = () => {
                     }
                 </ul>
             </div>
-            <div className="avatar navbar-end flex gap-5">
+            <div className="avatar navbar-end flex items-center gap-5 ">
                 <div>
                     {
-                        users?.email ? <button onClick={userLogOut} className='mt-2 btn'>Log out</button>
+                        users?.email ? <div className='flex mt-10 gap-3'>
+
+                            <button onClick={userLogOut} className=' btn'>Log out</button>
+                            <div className="avatar">
+                                <div className="w-12 rounded-full">
+                                    <img src={users.photoURL} title={users.displayName}/>
+                                </div>
+                            </div>
+                        </div>
                             :
                             <button className='mt-2 btn'><Link to="/login"><span className='mt-2'>Log in</span></Link></button>
 
 
 
                     }
+                    
                 </div>
 
             </div>
