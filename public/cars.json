@@ -45,9 +45,7 @@
                 "view_details": "https://example.com/toy4"
             },
         
-    {
-        "category": "Vintage_Cars",
-        "toys": [
+    
             {
                 "picture": "https://images.pexels.com/photos/249343/pexels-photo-249343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "name": "Classic Cruiser",
@@ -69,7 +67,6 @@
                 "rating": 4.6,
                 "view_details": "https://example.com/toy6"
             }
-        ]
-    }
+        
     
 ]

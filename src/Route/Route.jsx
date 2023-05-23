@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             {
                 path: "/cartoys/:text",
                 element: <PrivateRoute><CarDetails></CarDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/category/${params.text}`)
+                loader: ({params}) => fetch(`https://server-lyart-one.vercel.app/category/${params.text}`)
             },
             {
                 path: "/update/:id",
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
             {
                 path: "/alltoys/:id",
                 element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/alltoys/${params.id}`)
+                loader: ({params}) => fetch(`https://server-lyart-one.vercel.app/alltoys/${params.id}`)
             }
 
             

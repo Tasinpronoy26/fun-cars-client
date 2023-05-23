@@ -10,7 +10,7 @@ const ShopByCategories = () => {
     const [active, setActive] = useState("Sports_Cars"); // Set initial active category
 
     useEffect(() => {
-        fetch(`http://localhost:5000/category/${active}`)
+        fetch(`https://server-lyart-one.vercel.app/category/${active}`)
             .then(res => res.json())
             .then(data => setCategories(data));
     }, [active]);
@@ -37,14 +37,14 @@ const ShopByCategories = () => {
                 <TabPanel>
                     <div className='lg:grid grid-cols-3 gap-5 mt-10'>
                         {
-                            categories.map(category => category.toys.map(toy => <OffVehicles toy={toy} />))
+                            categories.map(category => category.toys.map(toy => <OffVehicles toy={toy} active={active} />))
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div className='lg:grid grid-cols-3 gap-5 mt-10'>
                         {
-                            categories.map(category => category.toys.map(toy => <Vintage toy={toy} />))
+                            categories.map(category => category.toys.map(toy => <Vintage toy={toy} active={active} />))
                         }
                     </div>
                 </TabPanel>

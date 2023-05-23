@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useEffect } from 'react';
 import Rating from 'react-rating';
 import { FaRegStar, FaStar } from 'react-icons/Fa';
@@ -6,11 +6,13 @@ import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../../AuthProvider/AuthProvider';
 
 
-const Vintage = ({ toy }) => {
+const Vintage = ({ toy, active }) => {
 
     const { name, picture, price, rating } = toy;
+    const { carDetails, setCarDetails } = useContext(AuthContext);
 
     useEffect(() => {
 
@@ -35,7 +37,7 @@ const Vintage = ({ toy }) => {
                     readonly
                     placeholderSymbol={<FaStar></FaStar>}
                     fullSymbol={<FaStar></FaStar>}></Rating>
-                <Link to="/cartoys"><button><BsFillArrowRightCircleFill></BsFillArrowRightCircleFill></button></Link>
+                <Link to={`/cartoys/${active}`}><button onClick={ () => setCarDetails(picture) }><BsFillArrowRightCircleFill></BsFillArrowRightCircleFill></button></Link>
             </div>
 
         </div>

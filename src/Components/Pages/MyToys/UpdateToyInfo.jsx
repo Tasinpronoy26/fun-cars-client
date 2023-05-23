@@ -42,7 +42,7 @@ const UpdateToyInfo = () => {
         console.log(update);
 
 
-       fetch(`http://localhost:5000/mytoy/${id}`, {
+       fetch(`https://server-lyart-one.vercel.app/mytoy/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

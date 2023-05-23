@@ -8,7 +8,7 @@ const AllToys = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/mytoy')
+        fetch('https://server-lyart-one.vercel.app/mytoy')
             .then(res => res.json())
             .then(data => setAllToys(data))
 

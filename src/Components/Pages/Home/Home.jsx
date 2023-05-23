@@ -3,6 +3,7 @@ import Banner from './Banner';
 import ImageGallery from './ImageGallery';
 import ShopByCategories from './ShopByCategories';
 import ExtraSection from './ExtraSection';
+import Partner from './Partner';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <ImageGallery></ImageGallery>
             <ShopByCategories></ShopByCategories>
             <ExtraSection></ExtraSection>
+            <Partner></Partner>
             
         </div>
     );
