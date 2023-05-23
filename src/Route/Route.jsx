@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import CarDetails from "../Components/CarDetails/CarDetails";
 import UpdateToyInfo from "../Components/Pages/MyToys/UpdateToyInfo";
 import ViewDetails from "../Components/Pages/AllToys/ViewDetails";
+import Error from "../Components/Error/Error";
 
 
 const router = createBrowserRouter([
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
             
         ],
     },
+    {
+        path: "/*",
+        element: <Error></Error>
+    }
 ]);
 
 export default router;
